@@ -10,22 +10,28 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://witwell.ai/">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%234f46e5'/><path d='M22 36h11l6 22 7-22h8l7 22 6-22h11L67 70h-9l-8-24-8 24h-9z' fill='white'/></svg>">
+<meta property="og:image" content="https://witwell.ai/icon-512.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
   :root{
     --bg:#ffffff; --fg:#0e1116; --muted:#5b6472; --rule:#e6e8ec;
     --accent:#4f46e5; --card:#f7f8fa; --ring:rgba(79,70,229,.16);
+    --drop:#0f9f8f;
   }
   :root:not([data-theme="light"]) { }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
       --bg:#0b0d10; --fg:#eef1f5; --muted:#9aa4b2; --rule:#1e242c;
       --accent:#8b86f8; --card:#11151a; --ring:rgba(139,134,248,.18);
+      --drop:#2dd4bf;
     }
   }
   :root[data-theme="dark"]{
     --bg:#0b0d10; --fg:#eef1f5; --muted:#9aa4b2; --rule:#1e242c;
     --accent:#8b86f8; --card:#11151a; --ring:rgba(139,134,248,.18);
+    --drop:#2dd4bf;
   }
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
@@ -75,9 +81,9 @@
 
   <header>
     <div class="mark">
-      <svg width="26" height="26" viewBox="0 0 100 100" aria-hidden="true">
-        <rect width="100" height="100" rx="22" fill="var(--accent)"/>
-        <path d="M22 36h11l6 22 7-22h8l7 22 6-22h11L67 70h-9l-8-24-8 24h-9z" fill="#fff"/>
+      <svg width="30" height="30" viewBox="10 7.75 100 100" aria-hidden="true">
+        <path d="M16 58 C24 58 26 92 40 92 C52 92 52 66 60 66 C68 66 68 92 80 92 C94 92 96 58 104 58" fill="none" stroke="var(--accent)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M60 18 C60 18 47 34 47 42 a13 13 0 0 0 26 0 C73 34 60 18 60 18 Z" fill="var(--drop)"/>
       </svg>
       <span>Witwell</span>
     </div>

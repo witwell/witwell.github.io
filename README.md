@@ -1,4 +1,4 @@
-# witwell-site
+# witwell.github.io
 
 Public landing page for <https://witwell.ai>, served by GitHub Pages.
 
@@ -8,3 +8,4 @@ no configuration. Witwell's actual source lives in the private repositories.
 
 - `index.html` — the whole site, self-contained, no external dependencies or trackers
 - `CNAME` — custom domain for GitHub Pages (`witwell.ai`)
+- `favicon.ico`, `icon.svg`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png` — the Witwell drop mark as browser, phone and link-preview icons
