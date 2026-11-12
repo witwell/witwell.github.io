@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Witwell · Governed context for enterprise AI agents</title>
-<meta name="description" content="Witwell gives every AI agent in your organization the knowledge, tools and memory of the people it works for, scoped to what each person may see, with every answer cited to its source. Self-hosted, local-model first, open core.">
-<meta property="og:title" content="Witwell · Governed context for enterprise AI agents">
-<meta property="og:description" content="Context follows the org chart. Permissions follow the person. Every answer is cited. Self-hosted, local-model first, open core.">
+<title>Witwell · Self-hosted memory for your organization’s AI agents</title>
+<meta name="description" content="Witwell is self-hosted memory for your organization’s AI agents. Agents search your documents, recordings and shared tools over MCP, access follows the org chart, and results cite their source. Local models by default.">
+<meta property="og:title" content="Witwell · Self-hosted memory for your organization’s AI agents">
+<meta property="og:description" content="Self-hosted memory for your organization’s AI agents. Access follows the org chart, and search results cite their source.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://witwell.ai/">
 <meta property="og:image" content="https://witwell.ai/icon-512.png">
@@ -231,6 +231,7 @@ body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-in
 .closing h2{font-size:clamp(28px,3.8vw,44px); letter-spacing:-.03em; line-height:1.1; font-weight:680; max-width:22ch}
 .closing .lede{text-align:center}
 .mail{font:500 14px var(--mono); color:var(--muted)}
+.hint{font-size:14.5px; color:var(--muted); margin:2px 0 0; max-width:46ch}
 footer{border-top:1px solid var(--rule); padding-block:28px 40px; color:var(--muted); font-size:14px}
 footer .wrap{display:flex; flex-wrap:wrap; gap:12px 28px; align-items:center; justify-content:space-between}
 footer .brand{font-size:16px}
@@ -285,23 +286,23 @@ footer a:hover{color:var(--ink)}
       <div>
         <span class="pill"><b>PRE-RELEASE</b> Design partners onboarding now</span>
         <h1>Context follows the org chart. <em>Permissions follow the person.</em></h1>
-        <p class="lede">Witwell is the governed memory for your organization's AI agents. It turns documents, recordings and the tools your agents build into knowledge every agent can use, scoped to exactly what its person may see, with every answer cited to its source.</p>
+        <p class="lede">Witwell is self-hosted memory for your organization's AI agents. It turns documents, recordings and the tools agents build into knowledge they can search over MCP. Each agent sees what the person it works for may see, and answers point to their source.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#partner">Become a design partner</a>
-          <a class="btn btn-ghost" href="#how">See how it works</a>
+          <a class="btn btn-ghost" href="#citations">See a cited answer</a>
         </div>
         <div class="hero-note" aria-label="Key properties">
           <span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Runs on your infrastructure</span>
           <span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Local models by default</span>
-          <span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Works with any MCP agent</span>
-          <span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Open core</span>
+          <span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Works with MCP agents</span>
+          <span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Apache-2.0 foundation</span>
         </div>
       </div>
 
       <figure class="hero-figure" style="margin:0">
         <svg class="tiers" viewBox="0 0 560 470" role="img" aria-labelledby="tiers-title tiers-desc">
           <title id="tiers-title">Tiered context</title>
-          <desc id="tiers-desc">An organization contains departments, teams and projects. A person's agent draws knowledge from every tier the person belongs to, and nothing from a department they do not belong to.</desc>
+          <desc id="tiers-desc">An organization contains departments, teams and projects. A person's agent draws knowledge from the tiers the person belongs to, and none from a department they don't belong to.</desc>
           <!-- Organization -->
           <rect class="t-box t-on" x="1" y="1" width="558" height="468" rx="18"/>
           <text class="t-label on" x="22" y="28">Organization</text>
@@ -342,10 +343,10 @@ footer a:hover{color:var(--ink)}
           <circle class="agent" cx="198" cy="361" r="22"/>
           <path d="M190 356 h16 M190 362 h16 M190 368 h10" stroke="var(--on-teal)" stroke-width="2" stroke-linecap="round"/>
           <text class="chip-text" x="228" y="357" style="font-weight:600">Your agent</text>
-          <text class="chip-off-text" x="228" y="374">sees every tier</text>
+          <text class="chip-off-text" x="228" y="374">sees your tiers</text>
           <path class="flow" d="M198 339 V314" />
         </svg>
-        <figcaption>Each agent inherits every tier its person belongs to, and nothing else.</figcaption>
+        <figcaption>You belong to Engineering, the Platform team and the Billing API project, so your agent can read those and the company-wide documents. Finance stays locked.</figcaption>
       </figure>
     </div>
   </section>
@@ -356,7 +357,7 @@ footer a:hover{color:var(--ink)}
       <div class="section-head">
         <span class="eyebrow">The problem</span>
         <h2>Agents start every task knowing nothing about where they work.</h2>
-        <p class="lede">The answer to most questions already exists somewhere in the company. What's missing is a safe, consistent way for agents to reach it.</p>
+        <p class="lede">Most answers are already written down somewhere in the company, in a handbook, a design review or an all-hands recording. Agents have no safe way to reach them.</p>
       </div>
       <div class="grid-3">
         <article class="card">
@@ -367,12 +368,12 @@ footer a:hover{color:var(--ink)}
         <article class="card">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 14.5v2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           <h3>Over-privileged</h3>
-          <p>Once an agent is wired to real systems, it often sees whatever the integration's service account sees. Nobody decided that; it just happened.</p>
+          <p>Once an agent is wired into company systems, it often sees whatever the integration's service account sees. Nobody chose that on purpose.</p>
         </article>
         <article class="card">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h10M4 12h16M4 17h7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M17 4l3 3-3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <h3>Rebuilt in every team</h3>
-          <p>Connectors, retrieval and the useful tools agents write get rebuilt by each team, because nobody can see that the next team over already made them.</p>
+          <h3>Rebuilt by each team</h3>
+          <p>Connectors, retrieval and the useful tools agents write get built again and again, because one team can't see what the team next door already made.</p>
         </article>
       </div>
     </div>
@@ -383,97 +384,41 @@ footer a:hover{color:var(--ink)}
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">How it works</span>
-        <h2>Define the organization once. Every agent inherits the right context.</h2>
+        <h2>Map your organization once. Agents read from the teams and projects of the people they work for.</h2>
       </div>
       <div class="steps">
         <div class="step">
           <div class="step-top"><span class="num">01</span><span class="status s-preview">Enterprise preview</span></div>
           <h3>Model your organization</h3>
           <p>Describe the structure once: organization, departments, teams, projects and people, to any depth. A team can sit under more than one parent, so matrix organizations fit as they are.</p>
-          <ul><li>Tiers mirror how the company actually works</li><li>Each tier owns its knowledge, tools and memory</li></ul>
+          <ul><li>Matrix teams fit without workarounds</li><li>Teams, departments and projects keep their own knowledge bases and tools</li></ul>
         </div>
         <div class="step">
           <div class="step-top"><span class="num">02</span><span class="status s-live">Running today</span></div>
           <h3>Bring in what it knows</h3>
-          <p>Documents, scanned PDFs, recordings and video become searchable knowledge bases, each passage tied to its exact source. Tools that agents build are captured for reuse.</p>
-          <ul><li>Converted, not just indexed</li><li>One source of truth for search and for people</li></ul>
+          <p>Documents, scanned PDFs, recordings and video become searchable knowledge bases, and each passage keeps a pointer to its source. Tools that agents build are filed for reuse.</p>
+          <ul><li>OCR for scans, transcripts for recordings</li><li>Citations by page, heading or timestamp</li></ul>
         </div>
         <div class="step">
           <div class="step-top"><span class="num">03</span><span class="status s-live">Running today</span></div>
-          <h3>Connect any agent</h3>
-          <p>Agents connect over the Model Context Protocol from any machine. Each draws from the tiers its person belongs to, cut to what that person is allowed to see, and what it reads is recorded. Per-person scoping arrives with Enterprise sign-in.</p>
-          <ul><li>Standard MCP, no proprietary SDK</li><li>Scope and audit follow the person</li></ul>
+          <h3>Connect your agents</h3>
+          <p>Agents connect over the Model Context Protocol from any machine. An agent reads from the tiers of the person it works for, and Witwell records what it reads. Per-person limits come with Enterprise sign-in, now in alpha.</p>
+          <ul><li>Standard MCP, no proprietary SDK</li><li>Access and audit are per person</li></ul>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRODUCT -->
-  <section class="alt" id="product">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Product</span>
-        <h2>One system for what agents know, remember and reuse.</h2>
-        <p class="lede">Retrieval, memory, requests and tools live together, so an agent can find the source, see what the team decided, ask a person, and pick up a tool a colleague's agent already wrote.</p>
-      </div>
-      <div class="caps">
-        <article class="cap">
-          <div class="cap-top"><h3>Cited knowledge</h3><span class="status s-live">Running today</span></div>
-          <p>Searches return ranked source passages, not paraphrase: the page range of a PDF, the heading and paragraph of a document, or the minute and second of a recording.</p>
-        </article>
-        <article class="cap">
-          <div class="cap-top"><h3>Converts anything</h3><span class="status s-live">Running today</span></div>
-          <p>PDFs (with OCR and text repair), Word, HTML, Markdown and EPUB, plus audio and video, transcribed and indexed, including text shown on screen.</p>
-        </article>
-        <article class="cap">
-          <div class="cap-top"><h3>Shared project memory</h3><span class="status s-live">Running today</span></div>
-          <p>Each project keeps a short, revisioned memory that every agent reads at the start of a session and keeps current: decisions, conventions, who owns what.</p>
-        </article>
-        <article class="cap">
-          <div class="cap-top"><h3>Requests between people and agents</h3><span class="status s-live">Running today</span></div>
-          <p>Bugs, features, questions, tasks and access requests go to a person, an agent, a team or a resource's owners, in threads that keep every message.</p>
-        </article>
-        <article class="cap">
-          <div class="cap-top"><h3>Captured tools</h3><span class="status s-live">Running today</span></div>
-          <p>When an agent builds a script, CLI or MCP server, Witwell files it with its versions, manifest and checksums. A teammate's agent can find it and use it the next day.</p>
-        </article>
-        <article class="cap">
-          <div class="cap-top"><h3>MCP-native</h3><span class="status s-live">Running today</span></div>
-          <p>Three MCP servers expose more than sixty tools, packaged with install guides for the common agent clients on Windows, macOS and Linux.</p>
-        </article>
-        <article class="cap">
-          <div class="cap-top"><h3>Organization and teams</h3><span class="status s-preview">Enterprise preview</span></div>
-          <p>Nested teams, matrix structures, people and a sharing matrix that decides which tier sees which knowledge base and tool.</p>
-        </article>
-        <article class="cap">
-          <div class="cap-top"><h3>Audit trail</h3><span class="status s-preview">Enterprise preview</span></div>
-          <p>A searchable record of who and which agent read or changed what, with filters and export.</p>
-        </article>
-        <article class="cap">
-          <div class="cap-top"><h3>Sign-in and directory sync</h3><span class="status s-alpha">Alpha</span></div>
-          <p>Single sign-on over OIDC and SAML, SCIM provisioning, and agents that act strictly as the signed-in person.</p>
-        </article>
-      </div>
-      <div class="legend" aria-label="Status legend">
-        <span class="status s-live">Running today</span><span>in production in the Witwell core</span>
-        <span class="status s-preview">Enterprise preview</span><span>built, being validated with design partners</span>
-        <span class="status s-alpha">Alpha</span><span>working build, in early testing</span>
-        <span class="status s-dev">In development</span><span>being built now</span>
       </div>
     </div>
   </section>
 
   <!-- PROOF -->
-  <section id="citations">
+  <section class="alt" id="citations">
     <div class="wrap proof">
       <div class="proof-copy">
         <span class="eyebrow">Answers you can check</span>
-        <h2 style="font-size:clamp(28px,3.4vw,40px); line-height:1.12; letter-spacing:-.025em; font-weight:650">Agents cite the passage, not a guess.</h2>
+        <h2 style="font-size:clamp(28px,3.4vw,40px); line-height:1.12; letter-spacing:-.025em; font-weight:650">Every answer points back to its source.</h2>
         <p class="lede">Witwell returns the words of the source and where they are. The agent answers from them, and anyone can follow the citation back.</p>
         <ul>
-          <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Citations native to each format: pages, headings and paragraphs, or timestamps.</span></li>
+          <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A PDF result gives the page. A recording gives the minute and second.</span></li>
           <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Search stays inside the project's scope unless someone widens it on purpose.</span></li>
-          <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Jobs report what really happened: complete, partial, or refused, never "done" with something missing.</span></li>
         </ul>
       </div>
       <div class="term" role="img" aria-label="Example of a Witwell search result with cited passages">
@@ -487,11 +432,66 @@ footer a:hover{color:var(--ink)}
           </div>
           <div class="hit">
             <div class="src">Platform all-hands, October · 12:34–13:10</div>
-            <div class="txt">"…the 90-day window is enforced in the storage job now, not by hand, and exceptions go through legal…"</div>
+            <div class="txt">"…the 90-day window is enforced by the storage job now, and exceptions go through legal…"</div>
             <div class="meta">scope: Engineering › Platform team · similarity 0.77</div>
           </div>
-          <div class="term-foot">Illustrative example. Content is invented; the format is Witwell's.</div>
+          <div class="term-foot">Illustrative example with invented content, in Witwell's output format.</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT -->
+  <section id="product">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Product</span>
+        <h2>Search, project memory, requests and shared tools on one server.</h2>
+        <p class="lede">An agent can find the source, see what the team decided, ask a person, and pick up a tool a colleague's agent already wrote.</p>
+      </div>
+      <div class="legend" style="margin:0 0 24px" aria-label="Status legend">
+        <span class="status s-live">Running today</span><span>in production on Witwell’s own deployment</span>
+        <span class="status s-preview">Enterprise preview</span><span>built, being validated with design partners</span>
+        <span class="status s-alpha">Alpha</span><span>working build, in early testing</span>
+        <span class="status s-dev">In development</span><span>being built now</span>
+      </div>
+      <div class="caps">
+        <article class="cap">
+          <div class="cap-top"><h3>Cited knowledge</h3><span class="status s-live">Running today</span></div>
+          <p>Searches return the ranked passages themselves, with where each came from: the page range of a PDF, the heading and paragraph of a document, or the minute and second of a recording.</p>
+        </article>
+        <article class="cap">
+          <div class="cap-top"><h3>Documents, audio and video</h3><span class="status s-live">Running today</span></div>
+          <p>PDFs with OCR and text repair, Word, HTML, Markdown and EPUB. Audio and video are transcribed, including text shown on screen. Each job reports anything it couldn’t convert.</p>
+        </article>
+        <article class="cap">
+          <div class="cap-top"><h3>Shared project memory</h3><span class="status s-live">Running today</span></div>
+          <p>Each project keeps a short, revisioned memory that agents read at the start of a session and keep current: decisions, conventions, who owns what.</p>
+        </article>
+        <article class="cap">
+          <div class="cap-top"><h3>Requests between people and agents</h3><span class="status s-live">Running today</span></div>
+          <p>Bugs, features, questions, tasks and access requests go to a person, an agent, a team or a resource's owners. Threads keep the full history.</p>
+        </article>
+        <article class="cap">
+          <div class="cap-top"><h3>Captured tools</h3><span class="status s-live">Running today</span></div>
+          <p>When an agent builds a script, CLI or MCP server, Witwell files it with its versions, manifest and checksums. A teammate's agent can find it and use it the next day.</p>
+        </article>
+        <article class="cap">
+          <div class="cap-top"><h3>Works over MCP</h3><span class="status s-live">Running today</span></div>
+          <p>Three MCP servers expose more than sixty tools. Install guides cover the common agent clients on Windows, macOS and Linux.</p>
+        </article>
+        <article class="cap">
+          <div class="cap-top"><h3>Organization and teams</h3><span class="status s-preview">Enterprise preview</span></div>
+          <p>Nested teams, matrix structures, people and a sharing matrix that decides which tier sees which knowledge base and tool.</p>
+        </article>
+        <article class="cap">
+          <div class="cap-top"><h3>Audit trail</h3><span class="status s-preview">Enterprise preview</span></div>
+          <p>A searchable record of who read or changed what, through which agent, with filters and export.</p>
+        </article>
+        <article class="cap">
+          <div class="cap-top"><h3>Sign-in and directory sync</h3><span class="status s-alpha">Alpha</span></div>
+          <p>Single sign-on over OIDC and SAML, SCIM provisioning, and agents that act as the signed-in user.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -501,8 +501,8 @@ footer a:hover{color:var(--ink)}
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">Architecture</span>
-        <h2>Everything runs where your data already lives.</h2>
-        <p class="lede">One Witwell backend on your infrastructure serves agents on any machine. Models run locally by default, so content never has to leave your servers to be understood.</p>
+        <h2>Witwell runs on your servers.</h2>
+        <p class="lede">One Witwell backend on your infrastructure serves agents on any machine. Models run locally by default, so no content goes to an outside AI service for processing.</p>
       </div>
       <div class="arch">
         <div class="arch-col">
@@ -520,10 +520,10 @@ footer a:hover{color:var(--ink)}
             <div class="node"><b>Intake and conversion</b><small>OCR, transcription, on-screen text, structure recovery</small></div>
             <div class="node"><b>Knowledge bases</b><small>Passages with citations, search scoped by project</small></div>
             <div class="node"><b>Memory, requests, tools</b><small>Project context, request threads, captured tools</small></div>
-            <div class="node"><b>Access and audit</b><small>Tiers, sharing, every read and change recorded</small></div>
+            <div class="node"><b>Access and audit</b><small>Tiers, sharing, and a record of reads and changes</small></div>
           </div>
           <div class="core-base">
-            <span>PostgreSQL + pgvector</span><span>Row-level security on every row</span><span>Local models</span>
+            <span>PostgreSQL + pgvector</span><span>PostgreSQL row-level security</span><span>Local models</span>
           </div>
         </div>
         <div class="arrow" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><path d="M4 14h18M16 8l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -543,18 +543,18 @@ footer a:hover{color:var(--ink)}
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">Security and deployment</span>
-        <h2>Built for the questions your security team will ask.</h2>
-        <p class="lede">Governance is in the data layer, not bolted onto a chat window. Every item below carries its real status.</p>
+        <h2>Answers for your security review.</h2>
+        <p class="lede">Access rules are enforced in the database, and the labels show what runs today.</p>
       </div>
       <div class="sec">
         <div class="sec-item"><h3>Self-hosted</h3><span class="status s-live">Running today</span><p>Witwell runs on your servers. Your content, indexes and memory stay inside your environment.</p></div>
         <div class="sec-item"><h3>Local models by default</h3><span class="status s-live">Running today</span><p>Embedding, transcription, OCR and vision run on local models. No external AI service is required.</p></div>
-        <div class="sec-item"><h3>Isolation in the database</h3><span class="status s-live">Running today</span><p>Every row carries its tenant, and PostgreSQL row-level security is forced on all of them, behind a single authorization path.</p></div>
-        <div class="sec-item"><h3>No phone-home licensing</h3><span class="status s-preview">Enterprise preview</span><p>Enterprise is unlocked by an offline-signed licence file. Witwell never calls home.</p></div>
-        <div class="sec-item"><h3>Audit trail</h3><span class="status s-preview">Enterprise preview</span><p>Who read or changed what, from which agent, searchable and exportable, with streaming to your SIEM in development.</p></div>
-        <div class="sec-item"><h3>Retention and egress policies</h3><span class="status s-preview">Enterprise preview</span><p>Policy views for what may leave the system and how long content is kept, with enforcement on the roadmap.</p></div>
-        <div class="sec-item"><h3>SSO and SCIM</h3><span class="status s-alpha">Alpha</span><p>OIDC and SAML sign-in and directory provisioning, with agents acting strictly as the signed-in person.</p></div>
-        <div class="sec-item"><h3>Packaged deployment</h3><span class="status s-alpha">Alpha</span><p>Docker Compose for the open-source edition and Helm for Enterprise, with high availability and air-gapped bundles in development.</p></div>
+        <div class="sec-item"><h3>Isolation in the database</h3><span class="status s-live">Running today</span><p>Every row records its tenant. PostgreSQL row-level security is forced on, and all access goes through one authorization path.</p></div>
+        <div class="sec-item"><h3>No phone-home licensing</h3><span class="status s-preview">Enterprise preview</span><p>Enterprise features are turned on by a license file signed offline. Witwell never calls home.</p></div>
+        <div class="sec-item"><h3>Audit trail</h3><span class="status s-preview">Enterprise preview</span><p>A searchable, exportable log of who read or changed what, through which agent. Streaming to your SIEM is in development.</p></div>
+        <div class="sec-item"><h3>Retention and egress policies</h3><span class="status s-preview">Enterprise preview</span><p>See the policies for what may leave the system and how long content is kept. Enforcement is on the roadmap.</p></div>
+        <div class="sec-item"><h3>SSO and SCIM</h3><span class="status s-alpha">Alpha</span><p>OIDC and SAML sign-in and SCIM directory provisioning. Agents act as the signed-in user.</p></div>
+        <div class="sec-item"><h3>Packaged deployment</h3><span class="status s-alpha">Alpha</span><p>Docker Compose for the open-source edition and Helm for Enterprise. High availability and air-gapped bundles are in development.</p></div>
       </div>
     </div>
   </section>
@@ -565,11 +565,11 @@ footer a:hover{color:var(--ink)}
       <div class="section-head">
         <span class="eyebrow">Editions</span>
         <h2>An enterprise platform on an open foundation.</h2>
-        <p class="lede">Witwell Enterprise gives an organization the structure, identity and oversight to run agents across every team. It is built on an open foundation, licensed Apache-2.0, so your security team can inspect the code that holds your knowledge, and teams that start on it move to Enterprise without a migration.</p>
+        <p class="lede">Enterprise adds what a company needs to run agents across many teams: the organization model, sign-in and directory sync, and the audit trail. It’s built on the open-source edition, licensed Apache-2.0. Your security team can read the code that stores your knowledge, and a team that starts on open source moves to Enterprise without a migration.</p>
       </div>
       <div class="editions">
         <article class="ed ent">
-          <div class="ed-head"><h3>Witwell Enterprise</h3><p class="sub">The platform for organizations putting agents to work across teams, departments and subsidiaries.</p></div>
+          <div class="ed-head"><h3>Witwell Enterprise</h3><p class="sub">For organizations running agents in many teams, departments or subsidiaries.</p></div>
           <ul>
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Organization model: hierarchy, teams and the sharing matrix</li>
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Audit trail with retention and egress policies</li>
@@ -579,9 +579,10 @@ footer a:hover{color:var(--ink)}
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>SIEM export and team MCP access <span class="status s-dev" style="margin-left:6px; vertical-align:1px">In development</span></span></li>
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>High availability, air-gapped installs and enterprise support <span class="status s-dev" style="margin-left:6px; vertical-align:1px">In development</span></span></li>
           </ul>
+          <div><a class="btn btn-primary btn-sm" href="mailto:hello@witwell.ai?subject=Witwell%20Enterprise">Talk to us about Enterprise</a></div>
         </article>
         <article class="ed">
-          <div class="ed-head"><h3>Witwell Open Source</h3><p class="sub">The foundation Enterprise is built on, for developers and individual use. Apache-2.0; repository coming to <a href="https://github.com/witwell">github.com/witwell</a>.</p></div>
+          <div class="ed-head"><h3>Witwell Open Source</h3><p class="sub">The foundation Enterprise is built on, for developers and individual use. Apache-2.0. The repository is coming to <a href="https://github.com/witwell">github.com/witwell</a>.</p></div>
           <ul>
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Knowledge bases with cited search</li>
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Conversion of documents, audio and video</li>
@@ -589,6 +590,7 @@ footer a:hover{color:var(--ink)}
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>MCP servers and client package</li>
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Local models and row-level security, in a single tenant</li>
           </ul>
+          <div><a class="btn btn-ghost btn-sm" href="https://github.com/witwell">Watch for the release</a></div>
         </article>
       </div>
     </div>
@@ -599,17 +601,18 @@ footer a:hover{color:var(--ink)}
     <div class="wrap partner">
       <div class="section-head" style="margin-bottom:0">
         <span class="eyebrow">Design partner program</span>
-        <h2>Shape Witwell with us.</h2>
-        <p class="lede">We're working with a small group of organizations that are putting agents into real work and need them to know the company without seeing too much of it.</p>
+        <h2>Put Witwell to work on your use case, with us.</h2>
+        <p class="lede">We're working with a small group of organizations that are putting agents to work and need them to know the company without seeing too much of it.</p>
         <div class="cta-row" style="margin-top:8px">
-          <a class="btn btn-primary" href="mailto:hello@witwell.ai?subject=Witwell%20design%20partner">Apply to be a design partner</a>
+          <a class="btn btn-primary" href="mailto:hello@witwell.ai?subject=Witwell%20design%20partner">Tell us about your use case</a>
         </div>
         <p class="mail">hello@witwell.ai</p>
+        <p class="hint">Include the use case, roughly how many people and agents, and which agent clients you use.</p>
       </div>
       <div class="plist">
         <div><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><p><b>Early access to Enterprise</b><span>Run the preview on your own infrastructure, with hands-on help to install it and model your organization.</span></p></div>
-        <div><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16v10H8l-4 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><p><b>A direct line to the builders</b><span>Your requirements go straight into the roadmap, and you see what's next before anyone else.</span></p></div>
-        <div><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p><b>What we ask</b><span>A real use case, a few people and their agents, and regular honest feedback over the pilot.</span></p></div>
+        <div><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16v10H8l-4 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><p><b>Talk to the people writing the code</b><span>Your requirements shape what we build next, and you see new builds before anyone else.</span></p></div>
+        <div><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l4 4 10-10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><p><b>What we ask</b><span>A use case you’re working on now, a few people and their agents, and regular feedback during the pilot.</span></p></div>
       </div>
     </div>
   </section>
@@ -617,14 +620,14 @@ footer a:hover{color:var(--ink)}
   <!-- FAQ -->
   <section class="alt" id="faq">
     <div class="wrap">
-      <div class="section-head"><span class="eyebrow">Questions</span><h2>Frequently asked</h2></div>
+      <div class="section-head"><h2>Frequently asked questions</h2></div>
       <div class="faq">
-        <details><summary>Is Witwell available today?</summary><p>The Witwell core runs in production today. The Enterprise edition is in preview with design partners, and the open-source edition will be published at github.com/witwell. Each capability on this page shows its current status.</p></details>
-        <details><summary>Which agents work with Witwell?</summary><p>Any agent client that speaks the Model Context Protocol. Witwell ships an install package with instructions for the common coding agents and desktop assistants on Windows, macOS and Linux.</p></details>
-        <details><summary>Does our data leave our environment?</summary><p>No. Witwell is self-hosted and runs its models locally by default, so documents, recordings and indexes stay on your servers. Using an external model provider would be an explicit choice you make, not a default.</p></details>
-        <details><summary>Is this enterprise search with a chat window?</summary><p>No. Witwell is built for agents: it returns cited source passages for an agent to work from, and adds what search tools lack, a shared memory, requests between people and agents, and a home for the tools agents build, all governed by the same organizational tiers.</p></details>
-        <details><summary>How does Witwell decide what an agent can see?</summary><p>Knowledge, tools and memory belong to tiers of the organization. A person's agent inherits the tiers that person belongs to and nothing else. The data layer already enforces isolation with row-level security on every row. The Enterprise edition, now in preview, adds teams, the sharing matrix and the audit trail; single sign-on, which ties each agent to its signed-in person, is in alpha.</p></details>
-        <details><summary>What does it cost?</summary><p>Enterprise is licensed to the organization, with pricing being set together with our design partners; talk to us about your scale. The open-source foundation is free under Apache-2.0.</p></details>
+        <details><summary>Is Witwell available today?</summary><p>Partly. The Witwell core runs in production today. The Enterprise edition is in preview with design partners, and the open-source edition will be published at github.com/witwell. Each capability on this page shows its status.</p></details>
+        <details><summary>Which agents work with Witwell?</summary><p>Agent clients that speak the Model Context Protocol. Witwell ships an install package with instructions for the common coding agents and desktop assistants on Windows, macOS and Linux.</p></details>
+        <details><summary>Does our data leave our environment?</summary><p>No. Witwell is self-hosted and runs its models locally by default, so documents, recordings and indexes stay on your servers. An external model provider is used only if you turn one on.</p></details>
+        <details><summary>Is this enterprise search with a chat window?</summary><p>No. Witwell is built for agents to call. It returns cited passages for an agent to work from, and adds things search tools lack: shared project memory, requests between people and agents, and a place for the tools agents build. The same organizational tiers control access to all of it.</p></details>
+        <details><summary>How does Witwell decide what an agent can see?</summary><p>Knowledge, tools and memory belong to tiers of the organization, and a person's agent gets the tiers that person belongs to. Today the data layer enforces isolation with row-level security on every row. The Enterprise edition, in preview, adds teams, the sharing matrix and the audit trail. Single sign-on, which ties each agent to the person signed in, is in alpha.</p></details>
+        <details><summary>What does it cost?</summary><p>Enterprise is licensed to the organization. We’re setting prices with our design partners, so tell us about your size. The open-source edition is free under Apache-2.0.</p></details>
       </div>
     </div>
   </section>
@@ -634,11 +637,11 @@ footer a:hover{color:var(--ink)}
     <div class="wrap">
       <div class="box">
         <span class="eyebrow">Witwell</span>
-        <h2>Give every agent the context it needs, and only that.</h2>
-        <p class="lede">If your agents are about to meet your company's real knowledge, let's talk before they do.</p>
+        <h2>Give your agents the context they need, and only that.</h2>
+        <p class="lede">If your agents are about to meet your company's knowledge, let's talk before they do.</p>
         <div class="cta-row" style="justify-content:center">
           <a class="btn btn-primary" href="mailto:hello@witwell.ai?subject=Witwell%20design%20partner">Become a design partner</a>
-          <a class="btn btn-ghost" href="https://github.com/witwell">Follow on GitHub</a>
+          <a class="btn btn-ghost" href="https://github.com/witwell">Watch for the open-source release</a>
         </div>
       </div>
     </div>
@@ -654,7 +657,7 @@ footer a:hover{color:var(--ink)}
     <nav aria-label="Footer">
       <a href="#how">How it works</a><a href="#product">Product</a><a href="#security">Security</a><a href="#editions">Editions</a><a href="https://github.com/witwell">GitHub</a>
     </nav>
-    <span>© 2026 Witwell, Inc.</span>
+    <span>© 2026 Witwell, Inc. This site sets no cookies and loads no third-party scripts.</span>
   </div>
 </footer>
 </body>
