@@ -21,7 +21,7 @@
   --bg:#ffffff; --bg-alt:#f6f7fb; --panel:#ffffff; --ink:#0d1020; --text:#2b3040; --muted:#5d6475;
   --rule:#e4e6ee; --rule-strong:#d3d6e2;
   --indigo:#4f46e5; --indigo-deep:#2f2a9e; --indigo-soft:#eeedfd; --teal:#0f9f8f; --teal-soft:#e2f6f3;
-  --amber:#a15c07; --amber-soft:#fdf1df; --dim:#c7cad6; --dim-fill:#f2f3f7;
+  --amber:#a15c07; --amber-soft:#fdf1df; --sky:#0369a1; --sky-soft:#e0f2fe; --dim:#c7cad6; --dim-fill:#f2f3f7;
   --code-bg:#0f1222; --code-text:#e6e8f2; --code-muted:#8b92ab;
   --shadow:0 1px 2px rgba(13,16,32,.04), 0 8px 24px -12px rgba(13,16,32,.12);
   --on-indigo:#ffffff; --on-teal:#ffffff;
@@ -34,7 +34,7 @@
   --bg:#0a0c14; --bg-alt:#0e111c; --panel:#121626; --ink:#f1f2f8; --text:#cdd1de; --muted:#959cb2;
   --rule:#1f2436; --rule-strong:#2a3047;
   --indigo:#8b86f8; --indigo-deep:#c7c4ff; --indigo-soft:#1c1b3b; --teal:#2dd4bf; --teal-soft:#0f2a28;
-  --amber:#f2b45c; --amber-soft:#2d2210; --dim:#3a4057; --dim-fill:#151a2a;
+  --amber:#f2b45c; --amber-soft:#2d2210; --sky:#7dd3fc; --sky-soft:#0c2433; --dim:#3a4057; --dim-fill:#151a2a;
   --code-bg:#070912; --code-text:#e6e8f2; --code-muted:#7c84a0;
   --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -12px rgba(0,0,0,.5);
   --on-indigo:#0a0c14; --on-teal:#0a0c14;
@@ -43,7 +43,7 @@
   --bg:#0a0c14; --bg-alt:#0e111c; --panel:#121626; --ink:#f1f2f8; --text:#cdd1de; --muted:#959cb2;
   --rule:#1f2436; --rule-strong:#2a3047;
   --indigo:#8b86f8; --indigo-deep:#c7c4ff; --indigo-soft:#1c1b3b; --teal:#2dd4bf; --teal-soft:#0f2a28;
-  --amber:#f2b45c; --amber-soft:#2d2210; --dim:#3a4057; --dim-fill:#151a2a;
+  --amber:#f2b45c; --amber-soft:#2d2210; --sky:#7dd3fc; --sky-soft:#0c2433; --dim:#3a4057; --dim-fill:#151a2a;
   --code-bg:#070912; --code-text:#e6e8f2; --code-muted:#7c84a0;
   --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -12px rgba(0,0,0,.5);
   --on-indigo:#0a0c14; --on-teal:#0a0c14;
@@ -70,6 +70,7 @@ section{padding-block:clamp(64px,9vw,112px)}
 .status::before{content:""; width:6px; height:6px; border-radius:50%; background:currentColor}
 .s-live{color:var(--teal); background:var(--teal-soft)}
 .s-preview{color:var(--indigo); background:var(--indigo-soft)}
+.s-alpha{color:var(--sky); background:var(--sky-soft)}
 .s-road{color:var(--amber); background:var(--amber-soft)}
 
 /* nav */
@@ -450,13 +451,14 @@ footer a:hover{color:var(--ink)}
           <p>A searchable record of who and which agent read or changed what, with filters and export.</p>
         </article>
         <article class="cap">
-          <div class="cap-top"><h3>Sign-in and directory sync</h3><span class="status s-road">Roadmap</span></div>
+          <div class="cap-top"><h3>Sign-in and directory sync</h3><span class="status s-alpha">Alpha</span></div>
           <p>Single sign-on over OIDC and SAML, SCIM provisioning, and agents that act strictly as the signed-in person.</p>
         </article>
       </div>
       <div class="legend" aria-label="Status legend">
         <span class="status s-live">Running today</span><span>in production in the Witwell core</span>
         <span class="status s-preview">Enterprise preview</span><span>built, being validated with design partners</span>
+        <span class="status s-alpha">Alpha</span><span>working build, in early testing</span>
         <span class="status s-road">Roadmap</span><span>designed, not yet built</span>
       </div>
     </div>
@@ -550,9 +552,9 @@ footer a:hover{color:var(--ink)}
         <div class="sec-item"><h3>Local models by default</h3><span class="status s-live">Running today</span><p>Embedding, transcription, OCR and vision run on local models. No external AI service is required.</p></div>
         <div class="sec-item"><h3>Isolation in the database</h3><span class="status s-live">Running today</span><p>Every row carries its tenant, and PostgreSQL row-level security is forced on all of them, behind a single authorization path.</p></div>
         <div class="sec-item"><h3>No phone-home licensing</h3><span class="status s-preview">Enterprise preview</span><p>Enterprise is unlocked by an offline-signed licence file. Witwell never calls home.</p></div>
-        <div class="sec-item"><h3>Audit trail</h3><span class="status s-preview">Enterprise preview</span><p>Who read or changed what, from which agent, searchable and exportable.</p></div>
+        <div class="sec-item"><h3>Audit trail</h3><span class="status s-preview">Enterprise preview</span><p>Who read or changed what, from which agent, searchable and exportable, with streaming to your SIEM on the roadmap.</p></div>
         <div class="sec-item"><h3>Retention and egress policies</h3><span class="status s-preview">Enterprise preview</span><p>Policy views for what may leave the system and how long content is kept, with enforcement on the roadmap.</p></div>
-        <div class="sec-item"><h3>SSO, SCIM and SIEM export</h3><span class="status s-road">Roadmap</span><p>OIDC and SAML sign-in, directory provisioning, and audit streaming to your SIEM.</p></div>
+        <div class="sec-item"><h3>SSO and SCIM</h3><span class="status s-alpha">Alpha</span><p>OIDC and SAML sign-in and directory provisioning, with agents acting strictly as the signed-in person.</p></div>
         <div class="sec-item"><h3>Packaged deployment</h3><span class="status s-road">Roadmap</span><p>Docker Compose for the open-source edition; Helm, high availability and air-gapped bundles for Enterprise.</p></div>
       </div>
       <p class="honest">We don't claim certifications we don't hold. Witwell has no SOC 2 or ISO report yet; design partners get the security model and architecture in detail, and a direct line to the people building it.</p>
@@ -584,7 +586,8 @@ footer a:hover{color:var(--ink)}
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Organization hierarchy, teams and sharing</li>
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Audit trail and governance policies</li>
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Multiple tenants, offline licensing</li>
-            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>SSO, SCIM, SIEM export and team MCP access <span class="status s-road" style="margin-left:6px; vertical-align:1px">Roadmap</span></span></li>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>SSO and SCIM <span class="status s-alpha" style="margin-left:6px; vertical-align:1px">Alpha</span></span></li>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>SIEM export and team MCP access <span class="status s-road" style="margin-left:6px; vertical-align:1px">Roadmap</span></span></li>
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>High availability, air-gapped installs, support <span class="status s-road" style="margin-left:6px; vertical-align:1px">Roadmap</span></span></li>
           </ul>
         </article>
@@ -621,7 +624,7 @@ footer a:hover{color:var(--ink)}
         <details><summary>Which agents work with Witwell?</summary><p>Any agent client that speaks the Model Context Protocol. Witwell ships an install package with instructions for the common coding agents and desktop assistants on Windows, macOS and Linux.</p></details>
         <details><summary>Does our data leave our environment?</summary><p>No. Witwell is self-hosted and runs its models locally by default, so documents, recordings and indexes stay on your servers. Using an external model provider would be an explicit choice you make, not a default.</p></details>
         <details><summary>Is this enterprise search with a chat window?</summary><p>No. Witwell is built for agents: it returns cited source passages for an agent to work from, and adds what search tools lack, a shared memory, requests between people and agents, and a home for the tools agents build, all governed by the same organizational tiers.</p></details>
-        <details><summary>How does Witwell decide what an agent can see?</summary><p>Knowledge, tools and memory belong to tiers of the organization. A person's agent inherits the tiers that person belongs to and nothing else. The data layer already enforces isolation with row-level security on every row. The Enterprise edition, now in preview, adds teams, the sharing matrix and the audit trail; single sign-on, which ties each agent to its signed-in person, is on the roadmap.</p></details>
+        <details><summary>How does Witwell decide what an agent can see?</summary><p>Knowledge, tools and memory belong to tiers of the organization. A person's agent inherits the tiers that person belongs to and nothing else. The data layer already enforces isolation with row-level security on every row. The Enterprise edition, now in preview, adds teams, the sharing matrix and the audit trail; single sign-on, which ties each agent to its signed-in person, is in alpha.</p></details>
         <details><summary>What does it cost?</summary><p>The open-source edition is free under Apache-2.0. Enterprise pricing will be set with our design partners; talk to us about your scale.</p></details>
       </div>
     </div>
